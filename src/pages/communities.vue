@@ -1,32 +1,29 @@
 <template>
-    <eh-layout>
-      Main Communities Page
-    </eh-layout>
+  <eh-layout>
+    <h1>{{ msg }}</h1>
+  </eh-layout>
 </template>
 
 <script>
-import BaseLayout from '@/layouts/BaseLayout.vue'
+import BaseLayout from "@/layouts/BaseLayout.vue";
 /**
  * Here goes the "main screen" with communitie's cards
  */
 
 export default {
-  name: 'Communities',
-  data () {
+  name: "Communities",
+  data() {
     return {
-    }
+      msg: "Conectamos personas. Cosechamos Riquezas"
+    };
   },
-  mounted () {
-  },
-  methods: {
-
-  },
+  mounted() {},
+  methods: {},
   components: {
-    'eh-layout': BaseLayout
+    "eh-layout": BaseLayout
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-
 </style>
