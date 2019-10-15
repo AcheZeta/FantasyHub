@@ -5,30 +5,33 @@
 </template>
 
 <script>
-import BaseLayout from "@/layouts/BaseLayout.vue";
-import axios from "axios";
-import env from "../../config/env";
+import BaseLayout from '@/layouts/BaseLayout.vue'
+import axios from 'axios'
+import env from '../../config/env'
+
 /**
  * Here goes the "main screen" with communitie's cards
  */
 
 export default {
-  name: "Communities",
-  data() {
+  name: 'Communities',
+  data () {
     return {
-      msg: "Conectamos personas. Cosechamos Riquezas"
-    };
+      msg: 'Conectamos personas. Cosechamos Riquezas',
+      community: []
+    }
   },
-  created: async function() {
-    let communitieResp = await axios.get(`${env.endpoint}/communities/`);
-    console.log(communitieResp);
+  created: async function () {
+    let communitieResp = await axios.get(`${env.endpoint}/communities/`)
+    this.community = communitieResp.data
+    console.log(this.community)
   },
-  mounted() {},
+  mounted () {},
   methods: {},
   components: {
-    "eh-layout": BaseLayout
+    'eh-layout': BaseLayout
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
