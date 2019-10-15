@@ -1,6 +1,11 @@
 <template>
   <eh-layout>
     <h1>{{ msg }}</h1>
+    <div>
+    <div v-for="item in community" :key="item.name">
+      {{ item.name }}
+    </div>
+    </div>
   </eh-layout>
 </template>
 
