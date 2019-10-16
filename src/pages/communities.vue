@@ -1,27 +1,7 @@
 <template>
   <eh-layout>
-    <h1>{{ msg }}</h1>
-    <div class="c-card">
-      <el-row :gutter="20">
-        <el-col
-          :span="6"
-          v-for="community in community"
-          :key="community.name"
-          :offset="community > 0 ? 2 : 0"
-        >
-          <span>{{ community.name }}</span>
-          <el-card :body-style="{ padding: '0px' }">
-            <img :src="community.image" class="image" />
-            <div style="padding: 14px;">
-              <span>{{ community.name }}</span>
-              <div class="bottom clearfix">
-                <el-button type="text" class="button">Operating</el-button>
-              </div>
-            </div>
-          </el-card>
-        </el-col>
-      </el-row>
-    </div>
+    <mainText />
+    <commCard />
   </eh-layout>
 </template>
 
@@ -29,6 +9,8 @@
 import BaseLayout from '@/layouts/BaseLayout.vue';
 import axios from 'axios';
 import env from '../../config/env';
+import commCard from '../components/CommCard';
+import mainText from '../components/MainText';
 
 /**
  * Here goes the "main screen" with communitie's cards
@@ -38,7 +20,6 @@ export default {
   name: 'Communities',
   data () {
     return {
-      msg: 'Conectamos personas. Cosechamos Riquezas',
       community: []
     }
   },
@@ -50,7 +31,9 @@ export default {
   mounted () {},
   methods: {},
   components: {
-    'eh-layout': BaseLayout
+    'eh-layout': BaseLayout,
+    commCard,
+    mainText
   }
 }
 </script>
