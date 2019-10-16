@@ -2,13 +2,14 @@
   <eh-layout>
     <h1>{{ msg }}</h1>
     <div class="c-card">
-      <el-row>
+      <el-row :gutter="20">
         <el-col
-          :span="8"
+          :span="6"
           v-for="community in community"
           :key="community.name"
-          :offset="index > 0 ? 2 : 0"
+          :offset="community > 0 ? 2 : 0"
         >
+          <span>{{ community.name }}</span>
           <el-card :body-style="{ padding: '0px' }">
             <img :src="community.image" class="image" />
             <div style="padding: 14px;">
