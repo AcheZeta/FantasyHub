@@ -7,8 +7,6 @@
 
 <script>
 import BaseLayout from '@/layouts/BaseLayout.vue';
-import axios from 'axios';
-import env from '../../config/env';
 import commCard from '../components/CommCard';
 import mainText from '../components/MainText';
 
@@ -23,11 +21,7 @@ export default {
       community: []
     }
   },
-  created: async function () {
-    let communitieResp = await axios.get(`${env.endpoint}/communities/`)
-    this.community = communitieResp.data
-    console.log(this.community)
-  },
+  created () {},
   mounted () {},
   methods: {},
   components: {

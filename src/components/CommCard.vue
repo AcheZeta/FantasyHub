@@ -13,7 +13,7 @@
           <div style="padding: 14px;">
             <span>{{ community.name }}</span>
             <div class="bottom clearfix">
-              <el-button type="text" class="button">Operating</el-button>
+              <el-button type="text" class="button">LinkTitle</el-button>
             </div>
           </div>
         </el-card>
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import BaseLayout from '@/layouts/BaseLayout.vue';
 import axios from 'axios';
 import env from '../../config/env';
 
@@ -46,8 +45,6 @@ export default {
   },
   mounted () {},
   methods: {},
-  components: {
-    'eh-layout': BaseLayout
-  }
+  components: {}
 }
 </script>

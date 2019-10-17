@@ -1,12 +1,10 @@
 <template>
-  <eh-layout>
-    Detail
-  </eh-layout>
+  <eh-layout>Detail</eh-layout>
 </template>
 
 <script>
-import BaseLayout from '@/layouts/BaseLayout.vue'
-
+import BaseLayout from '@/layouts/BaseLayout.vue';
+import axios from 'axios';
 /**
  * Here goes the detail cards
  */
@@ -20,17 +18,18 @@ export default {
   },
   data () {
     return {
-      community: null
+      community: null,
+      communityData: []
     }
   },
-  computed: {
-
+  computed: {},
+  methods: {},
+  created: async function () {
+    let communitieResp = await axios.get(`${env.endpoint}/communities/`)
+    this.communityData = communitieResp.data
+    console.log(this.communityData)
   },
-  methods: {
-
-  },
-  mounted () {
-  },
+  mounted () {},
   components: {
     'eh-layout': BaseLayout
   }
@@ -38,5 +37,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>

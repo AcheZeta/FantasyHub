@@ -7,17 +7,16 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'communities',
-      component: Communities
-    },
-    {
-      path: '/communities/:communityID/',
-      name: 'detail',
-      props: true,
-      component: () => import('./pages/community-detail.vue')
-    }
+  routes: [{
+    path: '/',
+    name: 'communities',
+    component: Communities
+  },
+  {
+    path: '/communities/:communityID/',
+    name: 'detail',
+    props: true,
+    component: () => import('./pages/community-detail.vue')
+  }
   ]
 })
