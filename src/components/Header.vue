@@ -1,7 +1,12 @@
 <template>
   <div class="header">
     <el-menu class="el-menu-demo" mode="horizontal">
-      <el-menu-item index="1">
+      <el-menu-item>
+        <router-link to="/">
+          <Logo />
+        </router-link>
+      </el-menu-item>
+      <el-menu-item>
         <Menu />
       </el-menu-item>
     </el-menu>
@@ -11,6 +16,8 @@
 
 <script>
 import Menu from './Menu';
+import Logo from './Logo';
+
 export default {
   name: 'Header',
   data () {
@@ -19,7 +26,8 @@ export default {
   mounted () {},
   methods: {},
   components: {
-    Menu
+    Menu,
+    Logo
   }
 }
 </script>

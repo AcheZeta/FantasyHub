@@ -13,7 +13,9 @@
           <div style="padding: 14px;">
             <span>{{ community.name }}</span>
             <div class="bottom clearfix">
-              <el-button type="text" class="button">LinkTitle</el-button>
+              <router-link :to="'/communities/'+ community.id">
+                <el-button type="text" class="button">Invertir</el-button>
+              </router-link>
             </div>
           </div>
         </el-card>
