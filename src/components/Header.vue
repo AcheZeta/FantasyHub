@@ -1,22 +1,17 @@
 <template>
   <div class="header">
-    <el-menu class="el-menu-demo" mode="horizontal">
-      <el-menu-item>
-        <router-link to="/">
-          <Logo />
-        </router-link>
-      </el-menu-item>
-      <el-menu-item>
-        <Menu />
-      </el-menu-item>
-    </el-menu>
+    <router-link to="/">
+      <Logo />
+    </router-link>
+    <span></span>
+    <Menu />
     <div class="line"></div>
   </div>
 </template>
 
 <script>
-import Menu from './Menu'
-import Logo from './Logo'
+import Menu from './Menu';
+import Logo from './Logo';
 
 export default {
   name: 'Header',
@@ -37,5 +32,7 @@ export default {
 
 .header {
   border-bottom: solid 1px $--color-gray;
+  position: absolute;
+  top: 0;
 }
 </style>

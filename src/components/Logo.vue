@@ -109,3 +109,11 @@ export default {
   name: 'Logo'
 }
 </script>
+
+<style lang="scss" scoped>
+svg {
+  margin: 0%;
+  padding: 0%;
+  left: auto;
+}
+</style>
