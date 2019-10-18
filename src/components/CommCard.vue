@@ -9,15 +9,15 @@
       >
         <span class="color-succes txt">{{ community.name }}</span>
         <el-card :body-style="{ padding: '0px' }">
-          <img :src="community.image" class="image" />
+          <router-link :to="'/communities/'+ community.id">
+            <img :src="community.image" class="image" />
+          </router-link>
           <el-col :span="24">
             <el-card shadow="always" class="main txt">
               {{ community.project.name }}
               <div style="padding: 14px;">
                 <div class="bottom clearfix">
-                  <router-link :to="'/communities/'+ community.id">
-                    <el-button type="text" class="button txt">Invertir</el-button>
-                  </router-link>
+                  <selectInvest />
                 </div>
               </div>
               <span>
@@ -36,6 +36,7 @@
 <script>
 import axios from 'axios';
 import env from '../../config/env';
+import selectInvest from '../components/Select';
 
 /**
  * Here goes the "main screen" with communitie's cards
@@ -56,7 +57,9 @@ export default {
   },
   mounted () {},
   methods: {},
-  components: {}
+  components: {
+    selectInvest
+  }
 }
 </script>
 
