@@ -67,21 +67,11 @@ export default {
 @import "~/assets/scss/element-variables.scss";
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
-.button {
-  border-color: $--color--button;
-  color: $--color-text-q;
-  background-color: $--color--button;
-  font-size: $--button-font-size;
-  border-radius: $--button-border-radius;
-  font-weight: $--button-font-weight;
-}
-
 .main {
   font-weight: 800;
 }
 
 .txt {
-  font-family: Nunito;
   font-size: $--font-display;
   letter-spacing: 1.32px;
   width: 100%;
