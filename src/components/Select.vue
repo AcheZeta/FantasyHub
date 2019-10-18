@@ -15,11 +15,11 @@
 <script>
 export default {
   methods: {
-    handleClick () {
-      alert('button click')
+    handleClick() {
+      alert("button click");
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <el-row :gutter="20" class="c-card">
       <el-col
         :span="6"
@@ -7,8 +7,8 @@
         :key="community.name"
         :offset="community > 0 ? 2 : 0"
       >
-        <span class="color-succes txt">{{ community.name }}</span>
-        <el-card :body-style="{ padding: '0px' }">
+        <h3 class="commName">{{ community.name }}</h3>
+        <el-card :body-style="{ padding: '0px'}">
           <router-link :to="'/communities/'+ community.id">
             <img :src="community.image" class="image" />
           </router-link>
@@ -67,6 +67,12 @@ export default {
 @import "~/assets/scss/element-variables.scss";
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
+.box {
+  padding: 1em;
+}
+.commName {
+  height: 5vh;
+}
 .main {
   font-weight: 800;
 }
@@ -75,5 +81,8 @@ export default {
   font-size: $--font-display;
   letter-spacing: 1.32px;
   width: 100%;
+}
+.el-row {
+  height: auto;
 }
 </style>
