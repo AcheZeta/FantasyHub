@@ -15,7 +15,7 @@
           <el-col :span="24">
             <el-card shadow="always" class="main txt">
               {{ community.project.name }}
-              <div style="padding: 14px;">
+              <div style="padding: 10px;">
                 <div class="bottom clearfix">
                   <selectInvest />
                 </div>
@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import axios from 'axios';
-import env from '../../config/env';
-import selectInvest from '../components/Select';
+import axios from 'axios'
+import env from '../../config/env'
+import selectInvest from '../components/Select'
 
 /**
  * Here goes the "main screen" with communitie's cards
