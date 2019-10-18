@@ -10,16 +10,23 @@
         <span class="color-succes txt">{{ community.name }}</span>
         <el-card :body-style="{ padding: '0px' }">
           <img :src="community.image" class="image" />
-          <el-col :span="8">
-            <el-card shadow="always">Always</el-card>
+          <el-col :span="24">
+            <el-card shadow="always" class="main txt">
+              {{ community.project.name }}
+              <div style="padding: 14px;">
+                <div class="bottom clearfix">
+                  <router-link :to="'/communities/'+ community.id">
+                    <el-button type="text" class="button txt">Invertir</el-button>
+                  </router-link>
+                </div>
+              </div>
+              <span>
+                Recibirás +
+                <b>{{ community.project.interest }}%</b>
+                <br />Interes anual en moneda local
+              </span>
+            </el-card>
           </el-col>
-          <div style="padding: 14px;">
-            <div class="bottom clearfix">
-              <router-link :to="'/communities/'+ community.id">
-                <el-button type="text" class="button txt">Invertir</el-button>
-              </router-link>
-            </div>
-          </div>
         </el-card>
       </el-col>
     </el-row>
@@ -61,15 +68,19 @@ export default {
   border-color: $--color--button;
   color: $--color-text-q;
   background-color: $--color--button;
-  border-radius: 4px;
+  font-size: $--button-font-size;
+  border-radius: $--button-border-radius;
+  font-weight: $--button-font-weight;
+}
+
+.main {
+  font-weight: 800;
 }
 
 .txt {
   font-family: Nunito;
-  font-size: 16px;
-  font-weight: 800;
+  font-size: $--font-display;
   letter-spacing: 1.32px;
-  line-height: 15px;
   width: 100%;
 }
 </style>
