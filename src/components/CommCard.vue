@@ -7,14 +7,16 @@
         :key="community.name"
         :offset="community > 0 ? 2 : 0"
       >
-        <span>{{ community.name }}</span>
+        <span class="color-succes txt">{{ community.name }}</span>
         <el-card :body-style="{ padding: '0px' }">
           <img :src="community.image" class="image" />
+          <el-col :span="8">
+            <el-card shadow="always">Always</el-card>
+          </el-col>
           <div style="padding: 14px;">
-            <span>{{ community.name }}</span>
             <div class="bottom clearfix">
               <router-link :to="'/communities/'+ community.id">
-                <el-button type="text" class="button">Invertir</el-button>
+                <el-button type="text" class="button txt">Invertir</el-button>
               </router-link>
             </div>
           </div>
@@ -50,3 +52,24 @@ export default {
   components: {}
 }
 </script>
+
+<style lang="scss" scoped>
+@import "~/assets/scss/element-variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+.button {
+  border-color: $--color--button;
+  color: $--color-text-q;
+  background-color: $--color--button;
+  border-radius: 4px;
+}
+
+.txt {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1.32px;
+  line-height: 15px;
+  width: 100%;
+}
+</style>
