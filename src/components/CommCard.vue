@@ -2,19 +2,28 @@
   <div class="box">
     <el-row :gutter="20" class="c-card">
       <el-col
+        :xs="24"
+        :sm="12"
+        :md="8"
+        :lg="6"
+        :xl="6"
         :span="6"
         v-for="community in community"
         :key="community.name"
         :offset="community > 0 ? 2 : 0"
       >
         <h3 class="commName">{{ community.name }}</h3>
-        <el-card :body-style="{ padding: '0px'}">
+        <!-- principal card -->
+        <el-card>
+          <!-- Router Link -->
           <router-link :to="'/communities/'+ community.id">
             <img :src="community.image" class="image" />
           </router-link>
+          <!--  -->
           <el-col :span="24">
             <el-card shadow="always" class="main txt">
-              {{ community.project.name }}
+              <div class="project-name">{{ community.project.name }}</div>
+
               <div style="padding: 10px;">
                 <div class="bottom clearfix">
                   <selectInvest />
@@ -27,6 +36,7 @@
               </span>
             </el-card>
           </el-col>
+          <!--  -->
         </el-card>
       </el-col>
     </el-row>
@@ -34,9 +44,9 @@
 </template>
 
 <script>
-import axios from 'axios'
-import env from '../../config/env'
-import selectInvest from '../components/Select'
+import axios from 'axios';
+import env from '../../config/env';
+import selectInvest from '../components/Select';
 
 /**
  * Here goes the "main screen" with communitie's cards
@@ -69,20 +79,17 @@ export default {
 
 .box {
   padding: 1em;
+  height: 10%;
 }
 .commName {
   height: 5vh;
 }
-.main {
-  font-weight: 800;
-}
 
-.txt {
-  font-size: $--font-display;
-  letter-spacing: 1.32px;
-  width: 100%;
-}
 .el-row {
   height: auto;
+}
+
+.project-name {
+  height: 5vh;
 }
 </style>
