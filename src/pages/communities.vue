@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import BaseLayout from '@/layouts/BaseLayout.vue';
-import commCard from '../components/CommCard';
-import mainText from '../components/MainText';
+import BaseLayout from '@/layouts/BaseLayout.vue'
+import commCard from '../components/CommCard'
+import mainText from '../components/MainText'
 
 /**
  * Here goes the "main screen" with communitie's cards

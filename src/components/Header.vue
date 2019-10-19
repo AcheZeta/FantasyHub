@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import Menu from './Menu';
-import Logo from './Logo';
+import Menu from './Menu'
+import Logo from './Logo'
 
 export default {
   name: 'Header',

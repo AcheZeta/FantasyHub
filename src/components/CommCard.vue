@@ -44,9 +44,9 @@
 </template>
 
 <script>
-import axios from 'axios';
-import env from '../../config/env';
-import selectInvest from '../components/Select';
+import axios from 'axios'
+import env from '../../config/env'
+import selectInvest from '../components/Select'
 
 /**
  * Here goes the "main screen" with communitie's cards
