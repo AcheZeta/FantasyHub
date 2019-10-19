@@ -14,8 +14,8 @@ import Header from '@/components/Header.vue'
 
 export default {
   /**
-     * The name of the layout.
-     */
+   * The name of the layout.
+   */
   name: 'base-layout',
 
   data () {
@@ -27,13 +27,10 @@ export default {
 
   computed: {},
 
-  mounted () {
-  },
-  methods: {
-  },
+  mounted () {},
+  methods: {},
   components: {
     'eh-header': Header
   }
-
 }
 </script>
