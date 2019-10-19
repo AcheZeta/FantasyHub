@@ -2,9 +2,7 @@
   <eh-layout>
     <el-col :span="14">
       <div class="block">
-        <el-image :src="communityData.image" :alt="communityData.name"></el-image>
-        <span class="name">{{ communityData.name }}</span>
-        <div class="description">{{ communityData.description }}</div>
+        <Detail />
         <Map />
       </div>
     </el-col>
@@ -21,6 +19,7 @@ import BaseLayout from '@/layouts/BaseLayout.vue';
 import axios from 'axios';
 import env from '../../config/env';
 import Map from '../components/Map';
+import Detail from '../components/DetailCard';
 /**
  * Here goes the detail cards
  */
@@ -51,7 +50,8 @@ export default {
   mounted () {},
   components: {
     'eh-layout': BaseLayout,
-    Map
+    Map,
+    Detail
   }
 }
 </script>
