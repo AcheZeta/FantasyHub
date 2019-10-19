@@ -5,9 +5,7 @@
         <el-image :src="communityData.image" :alt="communityData.name"></el-image>
         <span class="name">{{ communityData.name }}</span>
         <div class="description">{{ communityData.description }}</div>
-        <div class="map">
-          <el-image :src="map" :alt="communityData.name"></el-image>
-        </div>
+        <Map />
       </div>
     </el-col>
     <el-col :span="10">
@@ -22,6 +20,7 @@
 import BaseLayout from '@/layouts/BaseLayout.vue';
 import axios from 'axios';
 import env from '../../config/env';
+import Map from '../components/Map';
 /**
  * Here goes the detail cards
  */
@@ -37,9 +36,7 @@ export default {
     return {
       community: null,
       communityData: [],
-      idComm: this.$route.params.id,
-      map:
-        'https://raw.githubusercontent.com/AcheZeta/FantasyHub/dev/src/assets/images/Map.jpg'
+      idComm: this.$route.params.id
     }
   },
   computed: {},
@@ -53,7 +50,8 @@ export default {
   },
   mounted () {},
   components: {
-    'eh-layout': BaseLayout
+    'eh-layout': BaseLayout,
+    Map
   }
 }
 </script>
