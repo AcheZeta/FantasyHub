@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import BaseLayout from '@/layouts/BaseLayout.vue';
-import axios from 'axios';
-import env from '../../config/env';
-import Map from '../components/Map';
-import Detail from '../components/DetailCard';
-import Invest from '../components/InvestCard';
+import BaseLayout from '@/layouts/BaseLayout.vue'
+import axios from 'axios'
+import env from '../../config/env'
+import Map from '../components/Map'
+import Detail from '../components/DetailCard'
+import Invest from '../components/InvestCard'
 /**
  * Here goes the detail cards
  */

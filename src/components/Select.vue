@@ -1,6 +1,6 @@
 <template>
   <el-dropdown>
-    <el-button type="primary" class="selectInvest" @click="handleClick">
+    <el-button type="primary" class="selectInvest" @click="open">
       Invertir
       <i class="el-icon-arrow-down el-icon--right"></i>
     </el-button>
@@ -15,8 +15,27 @@
 <script>
 export default {
   methods: {
-    handleClick () {
-      alert('button click')
+    open () {
+      this.$confirm(
+        'Antes de Procesar tu pago confirma la cantidad que seas invertir',
+        {
+          confirmButtonText: 'OK',
+          cancelButtonText: 'Modificar',
+          center: true
+        }
+      )
+        .then(() => {
+          this.$message({
+            type: 'success',
+            message: 'ENHORABUENA, tu inversión ha sido registrada'
+          })
+        })
+        .catch(() => {
+          this.$message({
+            type: 'info',
+            message: 'Selecciona la cantidad a invertir'
+          })
+        })
     }
   }
 }
