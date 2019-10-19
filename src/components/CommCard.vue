@@ -63,7 +63,6 @@ export default {
   created: async function () {
     let communitieResp = await axios.get(`${env.endpoint}/communities/`)
     this.community = communitieResp.data
-    console.log(this.community)
   },
   mounted () {},
   methods: {},

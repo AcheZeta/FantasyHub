@@ -8,7 +8,7 @@
     </el-col>
     <el-col :span="10">
       <div class="block">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, eaque, facere atque quidem quam deleniti molestiae hic eum iure recusandae deserunt libero perferendis magnam harum? Nihil repudiandae error officia rerum!</p>
+        <Invest :communityData="communityData" />
       </div>
     </el-col>
   </eh-layout>
@@ -20,6 +20,7 @@ import axios from 'axios';
 import env from '../../config/env';
 import Map from '../components/Map';
 import Detail from '../components/DetailCard';
+import Invest from '../components/InvestCard';
 /**
  * Here goes the detail cards
  */
@@ -45,13 +46,13 @@ export default {
       `${env.endpoint}/communities/${this.$route.params.communityID}`
     )
     this.communityData = communitieResp.data
-    console.log(this.communityData)
   },
   mounted () {},
   components: {
     'eh-layout': BaseLayout,
     Map,
-    Detail
+    Detail,
+    Invest
   }
 }
 </script>

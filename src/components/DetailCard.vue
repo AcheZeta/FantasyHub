@@ -37,7 +37,7 @@ export default {
       `${env.endpoint}/communities/${this.$route.params.communityID}`
     )
     this.communityData = communitieResp.data
-    console.log(this.communityData)
+    console.log(communityData)
   },
   mounted () {},
   components: {}
