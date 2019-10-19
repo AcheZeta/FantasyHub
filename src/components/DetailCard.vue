@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import axios from 'axios';
-import env from '../../config/env';
+import axios from 'axios'
+import env from '../../config/env'
 /**
  * Here goes the detail cards
  */
@@ -37,7 +37,6 @@ export default {
       `${env.endpoint}/communities/${this.$route.params.communityID}`
     )
     this.communityData = communitieResp.data
-    console.log(communityData)
   },
   mounted () {},
   components: {}

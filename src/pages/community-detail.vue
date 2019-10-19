@@ -1,16 +1,18 @@
 <template>
   <eh-layout>
-    <el-col :span="14">
-      <div class="block">
-        <Detail />
-        <Map />
-      </div>
-    </el-col>
-    <el-col :span="10">
-      <div class="block">
-        <Invest :communityData="communityData" />
-      </div>
-    </el-col>
+    <el-row :gutter="20">
+      <el-col :span="14">
+        <div class="block">
+          <Detail />
+          <Map />
+        </div>
+      </el-col>
+      <el-col :span="10">
+        <div class="block">
+          <Invest :communityData="communityData" />
+        </div>
+      </el-col>
+    </el-row>
   </eh-layout>
 </template>
 
